@@ -1,0 +1,87 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url("./../imgs/background.png");
+  background-color: white;
+}
+
+
+.logo {
+    /*background-image: url("./../imgs/background.png");*/
+    background-color: white;
+    margin-top: 4%;
+    resize: both;
+    width: 260px;
+}
+
+nav {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
+    url("./../imgs/pattern.png");
+
+  opacity: 0.9;
+  height: 100px;
+  overflow: visible;
+}
+
+.ml-auto{
+  margin-right: 0%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav .nav-item {
+  margin: 10px;
+}
+
+nav ul li a.navList {
+  display: block;
+  width: 80px;
+  padding-top: 5%;
+  height: 35px;
+  text-align: center;
+  
+}
+.navList:hover {
+  color: #e62b1e !important;
+  text-decoration: none !important;
+  border-color: #e62b1e;
+
+}
+
+nav a.navList {
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+
+footer {
+  /*position: absolute;*/
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.99)),
+    url("./../imgs/pattern.png");
+  text-align: center;
+  padding: 50px;
+}
+
+footer p {
+  color: white;
+}
+
+i.ico {
+  color: white;
+  margin: 10px;
+}
+
+.fa-facebook-official:hover {
+  color: #3b5999;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>TEDxCairoUniversity</title>
+        <meta name="description" content="TEDxCairoUniversity x =independently organized TED event" />
+	   <meta name="keywords" content="TED, TEDx, TEDxCairoUniversity, cairo university, talks, inspiration" />
+        <meta name="twitter:card" value="summary">
+        <meta property="og:title" content="TEDxCairoUniversity" />
+        <meta property="og:url" content="http://TEDxCairoUniversity.com/" />
+        <meta property="og:image" content="http://tedxcairouniversity.com/img/tedxcairouniversity-logo.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="icon" href="imgs/favicon.ico">
+	   
+	   <link rel="stylesheet" type="text/css" href="css/template.css" />
+        
+        <style>
+            
+            @-webkit-keyframes rainbow {
+              0% {border-color: hsl(0, 100%, 50%);}
+              100% {border-color: hsl(255, 100%, 50%);}
+            }
+
+            .rainbow_border{
+              border: 4px solid hsl(0, 100%, 50%);
+              -webkit-animation: rainbow 5s infinite alternate; 
+            }
+            
+            
+            .blog-post {
+               margin: 5px;
+           }
+           
+           .event-navigation {
+               text-align: center;
+               margin: 50px;
+               height: 100px;
+           }
+           
+           .buttons {
+              align-self:center;
+              background:#41403E;
+              padding:1rem 1rem;
+              margin:0 1rem;
+              transition:all .5s ease;
+              color:white;
+              font-size:2rem;
+              letter-spacing:1px;
+              outline:none;
+              box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+              border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+              /*
+              Above is shorthand for:
+              border-top-left-radius: 255px 15px;
+              border-top-right-radius: 15px 225px;
+              border-bottom-right-radius: 225px 15px;
+              border-bottom-left-radius:15px 255px;
+              */
+               &:hover{
+                 box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+              } 
+              
+            }
+            .lined.thick{
+                 border:solid 7px #41403E;
+            }
+           
+            .blog-post{
+                text-align: left;
+                margin: 10px 20px;
+                background-color: white;
+            }
+            
+            
+            
+            .blog-post:hover img {
+              opacity: 0.6;
+            }
+            
+           img { 
+               text-align: center;
+                width: 100%;
+                height: auto;
+                width: auto\9; /* ie8 */
+           }
+            
+            .bg-image-full {
+              background: no-repeat center center fixed;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              background-size: cover;
+              -o-background-size: cover;
+            }
+            
+            
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            
+            <nav class="navbar transparent ">
+                <a href="index.php"><img class="logo" src="./imgs/webLogo.png"/></a>
+                
+                <ul class="nav ml-auto">
+                    <li class="nav-item events"><a class="navList" href="events.html" target="_blank">Events</a></li>
+                    
+                    <li class="nav-item blog"><a class="navList" href="blog.html">Blog</a></li>
+                    
+                    <li class="nav-item team"><a class="navList" href="team.html" target="_blank">Team</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <content class="content container">
+            <div class="event-navigation">
+                <a href="http://www.tedxcairouniversity.com/blog/" target="_blank"><button class="buttons thick linked" id="main">SUBSCRIBE</button></a>
+            </div>
+            
+            <!-- Agora’s Notepad -->
+            <div class="posts">
+                <div class="blog-post">
+                    <!--<a href="http://www.tedxcairouniversity.com/blog/agoras-notepad/" target="_blank" title="Agoura"><img class="event bg-image-full" src="imgs/blog-pages/AgoraNotepad.jpg"/></a>-->
+                    <a href="http://www.tedxcairouniversity.com/blog/agoras-notepad/" target="_blank" title="Agoura">
+                        <div class="py-5 bg-image-full" style="background-image: url('imgs/blog-pages/AgoraNotepad.jpg'); background-repeat: no-repeat; border-image-width: 100%">
+                        <div style="height: 200px;"></div>
+                      </div>
+                    </a>
+                    
+                    <div class="py-5">
+                        <div class="container">
+                          <h1>Agora’s Notepad</h1>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- A Messenger -->
+                <div class="blog-post">
+                    <a href="http://www.tedxcairouniversity.com/blog/a-messenger/" target="_blank" title="A messenger"><img class="event " src="imgs/blog-pages/a-messenger.png"/></a>
+                    
+                    <div class="py-5">
+                        <div class="container">
+                          <h1>A Messenger</h1>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Your Ultimate Guide -->
+                <div class="blog-post">
+                    <a href="http://www.tedxcairouniversity.com/blog/your-ultimate-guide-to-a-tedx-event/" target="_blank" title="Your ultimate guide to TEDx events"><img class="event" src="imgs/blog-pages/ultimate-guide.png"/></a>
+                    
+                    <div class="py-5">
+                        <div class="container">
+                          <h1>Your Ultimate Guide to a TEDx Event</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </content>
+        
+        <footer>
+            <a href="https://www.facebook.com/TEDxCairoUni/" target="_blank" onmouseover="document.getElementById(icon).style.color = 'red'" title="Facebook"><i class="ico fa fa-facebook-official fa-3x" id="icon" aria-hidden="true"></i></a>
+            
+            <a href="https://twitter.com/TEDxCairoUni" target="_blank" title="Twitter"><i class="ico fa fa-twitter fa-3x" id="icon" aria-hidden="true" ></i></a>
+            
+            <a href="https://www.instagram.com/TEDxCairoUni/" target="_blank" title="Instagram"><i class="ico fa fa-instagram fa-3x" id="icon" aria-hidden="true"></i></a>
+            
+            <a href="https://www.youtube.com/channel/UC5MHTl7K6PXWAKa_gagD1Xw" target="_blank" title="Youtube"><i class="ico fa fa-youtube fa-3x" id="icon" aria-hidden="true"></i></a>
+            
+            <br />
+            <br />
+            <p>TEDxCairoUniversity &copy; 2018. All rights reserved.</p>
+        </footer>
+        
+        
+         <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        
+        <!-- Fontawesome -->
+        <script src="https://use.fontawesome.com/88042aae37.js"></script>
+        
+        <script>
+            function color() {
+                document.getElementById(icon).style.color = "red";
+            }
+        </script>
+    </body> 
+</html>

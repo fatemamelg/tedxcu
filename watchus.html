@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>TEDxCairoUniversity</title>
+        <meta name="description" content="TEDxCairoUniversity x =independently organized TED event" />
+	   <meta name="keywords" content="TED, TEDx, TEDxCairoUniversity, cairo university, talks, inspiration" />
+	   
+	   <link rel="stylesheet" type="text/css" href="css/template.css" />
+        <link rel="stylesheet" type="text/css" href="css/watchus.css" />
+        <style>
+            h2 {
+                text-align: center;
+            }
+			  /* Parent element can be any width and height */ 
+.parent{
+	position: fixed;
+	width: 100%; 
+	height: 100%;
+	left: 0;
+	top: 0;
+	display: none;
+	text-align: center;
+}
+
+.parent:before{ /* pseudo element to force vertical centering of child element */
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.parent:after{ 
+	background: black;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+	z-index: 10;
+}
+
+ 
+.centeredchild{
+	position: relative; 
+	z-index: 20;
+	display: inline-block;
+	vertical-align: middle;
+	width: 80%;
+}
+
+.videowrapper{
+	position: relative;
+	padding-top: 25px;
+	padding-bottom: 56.25%; 
+	height: 0;
+}
+
+.videowrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+            
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <nav class="navbar transparent ">
+                <img class="logo" src="./imgs/webLogo.png"/>
+
+                <ul class="nav ml-auto">
+                    <li class="nav-item blog"><a class="navList" href="http://www.tedxcairouniversity.com/blog/" target="_blank">Blog</a></li>
+                    
+                    <li class="nav-item team"><a class="navList" href="team.html">Team</a></li>
+                    
+                    <li class="nav-item about"><a class="navList" href="#">About</a></li>
+                    
+                    <li class="nav-item contact"><a class="navList" href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+                <br />
+        <content class="content container">
+            <br />
+            
+           <a href="https://www.youtube.com/watch?v=5rAN3I00Xis&index=1&list=PL3heOfl3im5ZI8aKX3SOLmy014Wxn4IT3" class="lightbox"> <img width="100%" height="450"src="imgs\watch-us\AGORA_IMG.jpg"/></a>
+            <br />
+
+            
+             <a href="https://www.youtube.com/watch?list=PLMT7H-9MdpMZeIlsvgfwt6ncz-MBD5SsW&v=bp30Z2xvN-0" class="lightbox"> <img width="100%" height="450"src="imgs\watch-us\DECIPHER_IMG.jpg"  /></a>
+            
+            <br />
+
+             <a href="https://www.youtube.com/watch?list=PLMT7H-9MdpMa7u8maz5d56PZd5hKb4yYU&v=l0VhYf-2NrA" class="lightbox"> <img width="100%" height="450"src="imgs\watch-us\MOSIAC_IMG.jpg" /></a>
+            
+        </content>
+        
+        <footer>
+            <a href="https://www.facebook.com/TEDxCairoUni/" target="_blank" onmouseover="document.getElementById(icon).style.color = 'red'" title="Facebook"><i class="ico fa fa-facebook-official fa-3x" id="icon" aria-hidden="true"></i></a>
+            
+            <a href="https://twitter.com/TEDxCairoUni" target="_blank" title="Twitter"><i class="ico fa fa-twitter fa-3x" id="icon" aria-hidden="true" ></i></a>
+            
+            <a href="https://www.instagram.com/TEDxCairoUni/" target="_blank" title="Instagram"><i class="ico fa fa-instagram fa-3x" id="icon" aria-hidden="true"></i></a>
+            
+            <a href="https://www.youtube.com/channel/UC5MHTl7K6PXWAKa_gagD1Xw" target="_blank" title="Youtube"><i class="ico fa fa-youtube fa-3x" id="icon" aria-hidden="true"></i></a>
+            
+            <br />
+            <br />
+            <p>TEDxCairoUniversity &copy; 2018. All rights reserved.</p>
+        </footer>
+        <div id="youtubelightbox" class="parent">
+        <div class="centeredchild">
+            <div class="videowrapper">
+                <div id="playerdiv"></div>
+            </div>
+        </div>
+        </div>
+        
+         <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        
+        <!-- Fontawesome -->
+        <script src="https://use.fontawesome.com/88042aae37.js"></script>
+        
+        <script>
+            function color() {
+                document.getElementById(icon).style.color = "red";
+            }
+ 
+
+            var tag = document.createElement('script')
+
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0]
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+
+            var isiOS = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i) != null 
+
+            var youtubelightbox = document.getElementById('youtubelightbox')
+            var player 
+            youtubelightbox.addEventListener('click', function(){
+                this.style.display = 'none'
+                player.stopVideo()
+            }, false)
+
+            youtubelightbox.querySelector('.centeredchild').addEventListener('click', function(e){
+                e.stopPropagation()
+            }, false)
+
+
+            function onYouTubeIframeAPIReady() {
+                createlightbox()
+            }
+
+            function getyoutubeid(link){
+                var youtubeidreg = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i;
+                return youtubeidreg.exec(link)[1] 
+            }
+
+            function createyoutubeplayer(videourl){
+                player = new YT.Player('playerdiv', {
+                    videoId: videourl,
+                    playerVars: {autoplay:1}
+                })
+            }
+
+            function createlightbox(){
+                var targetlinks = document.querySelectorAll('.lightbox')
+                for (var i=0; i<targetlinks.length; i++){
+                    var link = targetlinks[i]
+                    link._videoid = getyoutubeid(link) 
+                    targetlinks[i].addEventListener('click', function(e){
+                        youtubelightbox.style.display = 'block'
+                        if (typeof player == 'undefined'){ 
+                            createyoutubeplayer(this._videoid)
+                        }
+                        else{
+                            if (isiOS){ 
+                                player.cueVideoById(this._videoid)
+                            }
+                            else{
+                                player.loadVideoById(this._videoid)
+                            }
+                        }
+                        e.preventDefault()
+                    }, false)
+                }
+            }
+
+        </script>
+    </body> 
+</html>

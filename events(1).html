@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>TEDxCairoUniversity</title>
+        <meta name="description" content="TEDxCairoUniversity x =independently organized TED event" />
+	   <meta name="keywords" content="TED, TEDx, TEDxCairoUniversity, cairo university, talks, inspiration" />
+        <meta name="twitter:card" value="summary">
+        <meta property="og:title" content="TEDxCairoUniversity" />
+        <meta property="og:url" content="http://TEDxCairoUniversity.com/" />
+        <meta property="og:image" content="http://tedxcairouniversity.com/img/tedxcairouniversity-logo.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="icon" href="imgs/favicon.ico">
+	   
+	   <link rel="stylesheet" type="text/css" href="css/template.css" />
+        
+        <style>
+            
+            @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+            *{
+              box-sizing:border-box;
+            }
+
+           .event-navigation {
+               text-align: center;
+               margin: 100px;
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               height: 150px;
+               
+           }
+            
+           
+           .buttons {
+              align-self:center;
+              background:#41403E;
+              padding:1rem 1rem;
+              margin:0 1rem;
+              transition:all .5s ease;
+              color:white;
+              font-size:2rem;
+              letter-spacing:1px;
+              outline:none;
+              box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+              border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+              /*
+              Above is shorthand for:
+              border-top-left-radius: 255px 15px;
+              border-top-right-radius: 15px 225px;
+              border-bottom-right-radius: 225px 15px;
+              border-bottom-left-radius:15px 255px;
+              */
+               &:hover{
+                 box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+              } 
+              
+            }
+            .lined.thick{
+                 border:solid 7px #41403E;
+            }
+            
+            /* Events images */
+            .events-banners {
+                background-color: white;
+                margin: 5px;
+                width: 100%;            
+           }
+            
+            .events-banners:hover img{
+                opacity: 0.6;
+            }
+           
+           img {
+                max-width: 100%;
+                height: auto;
+                width: auto\9; /* ie8 */
+           }
+            
+            .salon-events {
+                height: 100px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header>
+
+            <nav class="navbar transparent ">
+                <a href="index.php"><img class="logo" src="./imgs/webLogo.png"/></a>
+
+                <ul class="nav ml-auto">
+                    <li class="nav-item events"><a class="navList" href="events.html">Events</a></li>
+                    
+                    <li class="nav-item blog"><a class="navList" href="blog.html"s target="_blank">Blog</a></li>
+                    
+                    <li class="nav-item team"><a class="navList" href="team.html" target="_blank">Team</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <content class="content container">
+            <div class="event-navigation container">
+                <div class="mainButton">
+                    <button class="buttons lined thick" id="main">Main Event</button>
+                    <!--<br/>
+                    <div id="mainarr"><img class="arr" id="mainarr" src="imgs/events/downarrow.png"/></div>-->
+                </div>
+                
+                <div class="salonButton">
+                    <button class="buttons lined thick" id="salon">Salon Event</button>
+                    <!--<br/>
+                    <div id="salonarr"><img class="arr"  src="imgs/events/downarrow.png"/></div>-->
+                </div>
+            </div>
+            
+            <div class="main-events" id="main-events">
+                <div class="events-banners">
+                    <a href="https://www.tedxcairouniversity.com/agora.html" target="_blank" title="Go to Agora's page"><img class="event" src="imgs/events/agora.png"/></a>
+                </div>
+
+                <div class="events-banners">
+                    <a href="https://www.tedxcairouniversity.com/decipher.html" target="_blank" title="Go to Decipher's page"><img class="event" src="imgs/events/decipher.png"/></a>
+                </div>
+
+                <div class="events-banners">
+                    <a href="https://www.tedxcairouniversity.com/mosac.html" target="_blank" title="Go to Mosaic's page"><img class="event" src="imgs/events/mosaic.png"/></a>
+                </div>
+            </div>
+            
+            <div class="salon-events container" id="salon-events">
+                <h2>Coming Soon .....</h2>
+            </div>
+        </content>
+        
+        <footer>
+            <a href="https://www.facebook.com/TEDxCairoUni/" target="_blank" onmouseover="document.getElementById(icon).style.color = 'red'" title="Facebook"><i class="ico fa fa-facebook-official fa-3x" id="icon" aria-hidden="true"></i></a>
+            
+            <a href="https://twitter.com/TEDxCairoUni" target="_blank" title="Twitter"><i class="ico fa fa-twitter fa-3x" id="icon" aria-hidden="true" ></i></a>
+            
+            <a href="https://www.instagram.com/TEDxCairoUni/" target="_blank" title="Instagram"><i class="ico fa fa-instagram fa-3x" id="icon" aria-hidden="true"></i></a>
+            
+            <a href="https://www.youtube.com/channel/UC5MHTl7K6PXWAKa_gagD1Xw" target="_blank" title="Youtube"><i class="ico fa fa-youtube fa-3x" id="icon" aria-hidden="true"></i></a>
+            
+            <br />
+            <br />
+            <p>TEDxCairoUniversity &copy; 2018. All rights reserved.</p>
+        </footer>
+        
+        
+         <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        
+        <!-- Fontawesome -->
+        <script src="https://use.fontawesome.com/88042aae37.js"></script>
+        
+        <script>
+            function color() {
+                document.getElementById(icon).style.color = "red";
+            }
+        </script>
+        
+        <script>
+            $(document).ready(function(){
+                $("#salon-events").hide();
+                $("#main-events").hide();
+                $("#mainarr").hide();
+                $("#salonarr").hide();
+                
+                $("#main").click(function(){
+                    $("#main-events").slideDown(2000);
+                    $("#salon-events").hide();
+                    $("#salonarr").hide();
+                    $("#mainarr").show();
+                });
+                
+                $("#salon").click(function(){
+                    $("#main-events").hide();
+                    $("#salon-events").slideDown(2000);
+                    $("#salonarr").show();
+                    $("#mainarr").hide();
+                });
+            });
+        </script>
+    </body> 
+</html>
