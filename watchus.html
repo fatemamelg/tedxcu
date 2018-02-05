@@ -14,58 +14,58 @@
                 text-align: center;
             }
 			  /* Parent element can be any width and height */ 
-.parent{
-	position: fixed;
-	width: 100%; 
-	height: 100%;
-	left: 0;
-	top: 0;
-	display: none;
-	text-align: center;
-}
+            .parent{
+                position: fixed;
+                width: 100%; 
+                height: 100%;
+                left: 0;
+                top: 0;
+                display: none;
+                text-align: center;
+            }
 
-.parent:before{ /* pseudo element to force vertical centering of child element */
-	content: '';
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
-}
+            .parent:before{ /* pseudo element to force vertical centering of child element */
+                content: '';
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+            }
 
-.parent:after{ 
-	background: black;
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	opacity: 0.5;
-	z-index: 10;
-}
+            .parent:after{ 
+                background: black;
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0.5;
+                z-index: 10;
+            }
 
- 
-.centeredchild{
-	position: relative; 
-	z-index: 20;
-	display: inline-block;
-	vertical-align: middle;
-	width: 80%;
-}
 
-.videowrapper{
-	position: relative;
-	padding-top: 25px;
-	padding-bottom: 56.25%; 
-	height: 0;
-}
+            .centeredchild{
+                position: relative; 
+                z-index: 20;
+                display: inline-block;
+                vertical-align: middle;
+                width: 80%;
+            }
 
-.videowrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
+            .videowrapper{
+                position: relative;
+                padding-top: 25px;
+                padding-bottom: 56.25%; 
+                height: 0;
+            }
+
+            .videowrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
             
         </style>
     </head>
@@ -76,13 +76,16 @@
                 <img class="logo" src="./imgs/webLogo.png"/>
 
                 <ul class="nav ml-auto">
-                    <li class="nav-item blog"><a class="navList" href="http://www.tedxcairouniversity.com/blog/" target="_blank">Blog</a></li>
-                    
-                    <li class="nav-item team"><a class="navList" href="team.html">Team</a></li>
-                    
-                    <li class="nav-item about"><a class="navList" href="#">About</a></li>
-                    
-                    <li class="nav-item contact"><a class="navList" href="#">Contact</a></li>
+                    <ul class="nav ml-auto">
+                        <li class="nav-item events"><a class="navList" href="watchus.html" target="_blank">Watch Us</a></li>
+
+                        <li class="nav-item events"><a class="navList" href="events.html" target="_blank">Events</a></li>
+
+                        <li class="nav-item blog"><a class="navList" href="blog.html"s target="_blank">Blog</a></li>
+
+                        <li class="nav-item team"><a class="navList" href="team.html" target="_blank">Team</a></li>
+
+                    </ul>
                 </ul>
             </nav>
         </header>
