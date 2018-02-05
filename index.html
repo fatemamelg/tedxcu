@@ -9,7 +9,7 @@
        <meta name="twitter:card" value="summary">
 	   <meta property="og:title" content="TEDxCairoUniversity" />
         <meta property="og:url" content="http://TEDxCairoUniversity.com/" />
-        <meta property="og:image" content="http://tedxcairouniversity.com/img/tedxcairouniversity-logo.png" />
+
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="icon" href="imgs/favicon.ico">
@@ -21,7 +21,12 @@
        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
         
         <style>
+            /** Videos **/
+            .video-container video {
+              width: 100%;
+            }
             
+            /** What is TED/TEDx/TEDxCairoUniversity? **/
             .intro-title{
                 position: relative;
                 color: white;
@@ -53,12 +58,13 @@
                 position: relative;
                 text-align: center;
                 width: 100%;
+                justify-content: center;
             }
             .content-bg{
                 position: relative;
                 resize: both;
                 width: 100%;
-                height: 400px;
+                height: 420px;
                 
             }
             
@@ -68,14 +74,20 @@
                 top: 15px;
                 left: 20px;
                 padding: 30px;
+                
             }
             
-            p {
-                text-align: center;
+            h6, p {
+                text-align: justify;
+                justify-content: center;
+                margin: 30px;
             }
             
             
-            
+            #contact-us {
+                background-image: url(imgs/contactus/bg-content.jpg);
+                background-color: grey;
+            }
 
         </style>
     </head>
@@ -105,6 +117,38 @@
         </header>
         
         <content class="content container">
+            <section class="videos">
+                <div class="container-fluid push-main-down p-0">
+                  <div class="row py-2 mx-0">
+                    <div class="col-md-6 p-0" id="world-lines">
+
+                    </div>
+                    <div class="col-md-6 video-container p-0">
+                      <video id="usa" src="./vids/usa.mp4" preload="metadata" loop muted></video>
+                    </div>
+                  </div>
+                  <div class="row py-2 mx-0">
+                    <div class="col-md-6 video-container p-0">
+                      <video id="world" src="./vids/world.mp4" preload="metadata" loop muted></video>
+
+                    </div>
+                    <div class="col-md-6 p-0" id="usa-lines">
+
+                    </div>
+                  </div>
+                  <div class="row py-2 mx-0">
+                    <div class="col-md-6 p-0" id="egypt-lines">
+
+                    </div>
+                    <div class="col-md-6 video-container p-0">
+                      <video id="egypt" src="./vids/egypt.mp4" preload="metadata" loop muted></video>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            
+            
+            
             <section class="what-is-ted">
                 <div class="intro-title">
                     <img class="title-bg" src="imgs/main-page/what-is-TED.png"/>
@@ -133,7 +177,7 @@
             </section>
             
             <!-- Contact us -->
-            <section id="content contact-us">
+            <section id="content contact-us" style="color: white;">
                 <div class="sub-content">
                   <div class="container">
                     <div class="row">
@@ -232,7 +276,76 @@
                 document.getElementById(icon).style.color = "red";
             }
             
-            $(Document).ready(function(){
+            // Videos
+            // @ts-nocheck
+
+            $.fn.isFullyVisible = function() {
+              var win = $(window);
+
+              var viewport = {
+                top: win.scrollTop(),
+                left: win.scrollLeft()
+              };
+              viewport.right = viewport.left + win.width();
+              viewport.bottom = viewport.top + win.height();
+
+              var elemtHeight = this.height(); // Get the full height of current element
+              elemtHeight = Math.round(elemtHeight); // Round it to whole humber
+
+              var bounds = this.offset(); // Coordinates of current element
+              bounds.top = bounds.top + elemtHeight;
+              bounds.right = bounds.left + this.outerWidth();
+              bounds.bottom = bounds.top + this.outerHeight();
+
+              return !(
+                viewport.right < bounds.left ||
+                viewport.left > bounds.right ||
+                viewport.bottom < bounds.top ||
+                viewport.top > bounds.bottom
+              );
+            };
+
+            const evListener = function() {
+              const world = document.getElementById("world");
+              const usa = document.getElementById("usa");
+              const egypt = document.getElementById("egypt");
+
+              if ($("#world").isFullyVisible()) {
+                world.play();
+              } else {
+                world.pause();
+              }
+
+              if ($("#usa").isFullyVisible()) {
+                usa.play();
+              } else {
+                usa.pause();
+              }
+
+              if ($("#egypt").isFullyVisible()) {
+                egypt.play();
+              } else {
+                egypt.pause();
+              }
+            };
+
+            document.addEventListener("scroll resize DOMContentLoaded", evListener);
+
+            ["scroll", "resize", "DOMContentLoaded"].forEach(evt =>
+              document.addEventListener(evt, evListener, false)
+            );
+
+            const Ps = sel => {
+              $("#ted-p").hide();
+              $("#tedx-p").hide();
+              $("#tedxcu-p").hide();
+
+              if (sel) $(sel).show();
+            };
+            
+            $(Document).ready(function(){               
+                
+                // What is TED/ TEDx/ TEDxCairoUniversity?
                 $(".tedx").hide();
                 $(".tedxcu").hide();
                 
